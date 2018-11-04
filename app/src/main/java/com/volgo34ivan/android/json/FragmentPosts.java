@@ -32,6 +32,7 @@ public class FragmentPosts extends Fragment {
     private static List<Users> mUser = new ArrayList<>();
     private static final String TAG = "myFragment";
     private static String timestamp;
+    private StringUpperCase uc;
 
     public static List<Users> getUsersList(){
         return mUser;
@@ -52,6 +53,7 @@ public class FragmentPosts extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        uc = new StringUpperCase();
         Date date = Calendar.getInstance().getTime();
         @SuppressLint("SimpleDateFormat") SimpleDateFormat simpleDate =  new SimpleDateFormat("dd MMM, yyyy");
         timestamp = simpleDate.format(date);
@@ -112,9 +114,9 @@ public class FragmentPosts extends Fragment {
 
         @SuppressLint("SetTextI18n")
         void bindItem(Posts posts){
-            text1.setText(posts.getTitle());
+            text1.setText(uc.upperCase(posts.getTitle()));
             text2.setText(timestamp);
-            text3.setText(posts.getBody().substring(0,100) + "...");
+            text3.setText(uc.upperCase(posts.getBody().substring(0,100) + "..."));
             text4.setText(Integer.toString(mUser.size()));
         }
 

@@ -34,6 +34,7 @@ public class FragmentDetail extends Fragment {
     private static List<Users> mUsers;
     private static int mId = 0;
     private static final List<Bitmap> bitmapPhotos = new ArrayList<>();
+    private StringUpperCase uc;
 
 
     public static FragmentDetail newInstance(Integer i){
@@ -48,6 +49,7 @@ public class FragmentDetail extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        uc = new StringUpperCase();
         mPhotos = FragmentPosts.getPhotosList();
         mPosts = FragmentPosts.getPostsList();
         mUsers = FragmentPosts.getUsersList();
@@ -67,8 +69,8 @@ public class FragmentDetail extends Fragment {
         mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(),1));
         mRecyclerView.setNestedScrollingEnabled(false);
         datePost.setText(FragmentPosts.getCurrentDate());
-        titlePost.setText(mPosts.get(mId).getTitle());
-        bodyPost.setText(mPosts.get(mId).getBody());
+        titlePost.setText(uc.upperCase(mPosts.get(mId).getTitle()));
+        bodyPost.setText(uc.upperCase(mPosts.get(mId).getBody()));
         return view;
     }
 
@@ -93,8 +95,8 @@ public class FragmentDetail extends Fragment {
         @SuppressLint("SetTextI18n")
         void bindItem(Users users, Bitmap bitmap){
             String[] parts = users.getEmail().split("@");
-            name.setText(parts[0]);
-            comment.setText(users.getBody());
+            name.setText(uc.upperCase(parts[0]));
+            comment.setText(uc.upperCase(users.getBody()));
             commentDate.setText(FragmentPosts.getCurrentDate());
             profile_image.setImageBitmap(bitmap);
         }

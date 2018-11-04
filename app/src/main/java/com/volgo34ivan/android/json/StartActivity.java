@@ -54,7 +54,7 @@ public class StartActivity extends Activity {
             @Override
             public void run() {
                 if(connection){
-                    Intent start = new Intent(StartActivity.this, ActivityItems.class);
+                    Intent start = new Intent(StartActivity.this, ActivityPosts.class);
                     StartActivity.this.startActivity(start);
                     THREAD_DELAY_1 = 1000;
                     connection = true;

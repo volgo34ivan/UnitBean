@@ -3,7 +3,7 @@ package com.volgo34ivan.android.json;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 
-public class ActivityItems extends SingleFragmentActivity {
+public class ActivityPosts extends SingleFragmentActivity {
 
     @Override
     protected Fragment createFragment() {
