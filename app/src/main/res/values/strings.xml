@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UnitBean</string>
+    <string name="description_start_image">start_image_view</string>
+    <string name="msg_icon">Ic message</string>
+    <string name="post">Статья</string>
+    <string name="start_background">start background</string>
+</resources>
