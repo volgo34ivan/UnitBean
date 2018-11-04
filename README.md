@@ -1,5 +1,7 @@
 # UnitBean
 - An example of using material design with JSON. Applied RecyclerView and CardViev.
+- Пример приложения, использующего концепцию материального дизайна.
+- Применены RecyclerView и CardView, а также загрузка объекта JSON из [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
 - Описание работы приложения:
 - 1.Приложение не запустится, если не будет доступа к сети интернет.
 - 2.Если сеть доступна, то загрузятся тестовые данные о постах.
