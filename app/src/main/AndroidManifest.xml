@@ -16,11 +16,13 @@
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
             android:name=".ActivityPosts"
+            android:theme="@style/AppTheme"
             />
 
         <activity
-            android:name=".StartActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            android:name=".ActivityStart"
+            android:theme="@style/SplashTheme"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -28,8 +30,7 @@
         </activity>
 
         <activity
-            android:name=".ActivityDetail"
-            android:parentActivityName=".ActivityPosts">
+            android:name=".ActivityDetail">
         </activity>
 
     </application>

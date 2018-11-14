@@ -6,13 +6,9 @@ import android.net.ConnectivityManager;
 import static android.content.Context.CONNECTIVITY_SERVICE;
 
 class ConnectionCheck {
-    private final Context mContext;
-    ConnectionCheck(Context context){
-        mContext = context;
-    }
-    boolean isNetworkAvailableAndConnected(){
+    public static boolean isNetworkAvailableAndConnected(Context context){
         ConnectivityManager cm =
-                (ConnectivityManager) mContext.getSystemService(CONNECTIVITY_SERVICE);
+                (ConnectivityManager) context.getSystemService(CONNECTIVITY_SERVICE);
         assert cm != null;
         boolean isNetworkAvailable = cm.getActiveNetworkInfo() != null;
         return isNetworkAvailable &&

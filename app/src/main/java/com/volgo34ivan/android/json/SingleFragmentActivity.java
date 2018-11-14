@@ -14,8 +14,7 @@ public abstract class SingleFragmentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        boolean connection = new ConnectionCheck(getApplicationContext()).isNetworkAvailableAndConnected();
-        if (connection) {
+        if (ConnectionCheck.isNetworkAvailableAndConnected(this)) {
             FragmentManager fm = getSupportFragmentManager();
             Fragment fragment = fm.findFragmentById(R.id.fragment_container);
 
