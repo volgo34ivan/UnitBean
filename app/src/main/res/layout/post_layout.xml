@@ -18,7 +18,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/text1"
+                android:id="@+id/txt_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
@@ -34,7 +34,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/text2"
+                android:id="@+id/txt_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -44,10 +44,10 @@
                 tools:text="Date"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text1" />
+                app:layout_constraintTop_toBottomOf="@+id/txt_title" />
 
             <TextView
-                android:id="@+id/text3"
+                android:id="@+id/txt_body"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -57,21 +57,21 @@
                 android:textColor="@android:color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text2" />
+                app:layout_constraintTop_toBottomOf="@+id/txt_date" />
 
             <ImageView
                 android:contentDescription="@string/msg_icon"
-                android:id="@+id/image1"
+                android:id="@+id/ic_comments"
                 android:layout_width="30dp"
                 android:layout_height="25dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:tint="@color/colorBackground"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/text4" />
+                app:layout_constraintEnd_toStartOf="@+id/txt_comments" />
 
             <TextView
-                android:id="@+id/text4"
+                android:id="@+id/txt_comments"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"

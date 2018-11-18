@@ -30,7 +30,7 @@
         </activity>
 
         <activity
-            android:name=".ActivityDetail">
+            android:name=".ActivityComments">
         </activity>
 
     </application>
