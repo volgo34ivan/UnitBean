@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.volgo34ivan.android.json.Adapters.PostAdapter;
 import com.volgo34ivan.android.json.Models.Comment;
 import com.volgo34ivan.android.json.Models.Photo;
@@ -26,7 +27,6 @@ import retrofit2.Retrofit;
 public class FragmentPosts extends Fragment {
 
     private RecyclerView recycler_posts;
-    private static FragmentPosts instance;
     IMyAPI myAPI;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     private static List<Post> postList = new ArrayList<>();
@@ -34,12 +34,7 @@ public class FragmentPosts extends Fragment {
     private static List<Comment> commentList = new ArrayList<>();
 
     public static FragmentPosts newInstance(){
-        instance = new FragmentPosts();
-        return instance;
-    }
-
-    public static FragmentPosts getInstance() {
-        return instance;
+        return new FragmentPosts();
     }
 
     @Override

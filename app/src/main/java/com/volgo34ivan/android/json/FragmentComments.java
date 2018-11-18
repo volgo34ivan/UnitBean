@@ -6,11 +6,9 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.volgo34ivan.android.json.Adapters.CommentAdapter;
@@ -19,10 +17,8 @@ import com.volgo34ivan.android.json.Models.Photo;
 import com.volgo34ivan.android.json.Retrofit.IMyAPI;
 import com.volgo34ivan.android.json.Retrofit.RetrofitClient;
 import java.util.List;
-import io.reactivex.android.schedulers.AndroidSchedulers;
+
 import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.functions.Consumer;
-import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 
 public class FragmentComments extends Fragment {

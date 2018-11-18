@@ -48,8 +48,6 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentViewHolder> {
         holder.txt_comment.setText(commentList.get(position).getBody());
         holder.txt_dateComment.setText(timestamp);
         Glide.with(context).load(photoList.get(position).getUrl()).into(holder.profile_image);
-        //holder.profile_image;
-        //profile image problem
     }
 
     @Override
